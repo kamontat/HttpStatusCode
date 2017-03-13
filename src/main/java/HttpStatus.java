@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * All HTTP Responded Status Code. <br>
- * Base on wikipedia & Ben Griffiths Code
+ * Base on wikipedia and Ben Griffiths Code
  * <ul>
  * <li><a href="https://github.com/whostolebenfrog/status-codes/blob/master/src/main/java/com/floatbackwards/statuscodes/HttpStatus.java">Github gist</a></li>
  * <li><a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">Wiki</a></li>
@@ -514,23 +514,23 @@ public enum HttpStatus {
 	}
 	
 	/**
-	 * Returns a json string representing this HttpStatus
+	 * Returns a json string representing this main.java.HttpStatus
 	 *
-	 * @return a json string representing this HttpStatus
+	 * @return a json string representing this main.java.HttpStatus
 	 */
 	public final String getJsonString() {
 		return jsonString;
 	}
 	
 	/**
-	 * Returns the HttpStatus object with a code matching the supplied int
+	 * Returns the main.java.HttpStatus object with a code matching the supplied int
 	 *
 	 * @param httpStatus
 	 * 		the httpStatus code
-	 * @return the HttpStatus object with a code matching the supplied int
+	 * @return the Http Status object with a code matching the supplied int
 	 */
 	public static HttpStatus[] getByCode(int httpStatus) {
-		ArrayList<HttpStatus> statusList = new ArrayList<>();
+		ArrayList<HttpStatus> statusList = new ArrayList<HttpStatus>();
 		for (HttpStatus status : HttpStatus.values()) {
 			if (status.getCode() == httpStatus) {
 				statusList.add(status);
@@ -540,13 +540,13 @@ public enum HttpStatus {
 	}
 	
 	/**
-	 * Returns the HttpStatus with the Integer code that matches the supplied
-	 * String. Returns HttpStatus.Unknown if the supplied String is not a valid
+	 * Returns the main.java.HttpStatus with the Integer code that matches the supplied
+	 * String. Returns main.java.HttpStatus.Unknown if the supplied String is not a valid
 	 * Integer or is not in the list of available HTTP status codes.
 	 *
 	 * @param httpStatus
 	 * 		the String containing the status code to match
-	 * @return the HttpStatus for the supplied String
+	 * @return the Http Status for the supplied String
 	 */
 	public static HttpStatus[] getByCode(String httpStatus) {
 		int statusCode;
@@ -559,9 +559,9 @@ public enum HttpStatus {
 	}
 	
 	/**
-	 * Returns a json string representing this HttpStatus
+	 * Returns a json string representing this main.java.HttpStatus
 	 *
-	 * @return a json string representing this HttpStatus
+	 * @return a json string representing this main.java.HttpStatus
 	 */
 	public String generateJsonString() {
 		return String.format("{\"code\": %s, \"name\": \"%s\", \"description\": \"%s\"}", code, name, description);
